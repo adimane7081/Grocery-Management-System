@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const AllProducts = () => {
+const AdminAllProducts = () => {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const navigate = useNavigate();
@@ -93,7 +93,7 @@ const AllProducts = () => {
                     ))}
                 </tbody>
             </table>
-            <button style={styles.button} onClick={() => navigate('/vendordashboard')}>
+            <button style={styles.button} onClick={() => navigate('/admindashboard')}>
                 Back to Dashboard
             </button>
         </div>
@@ -147,5 +147,5 @@ const styles = {
     },
 };
 
-export default AllProducts;
+export default AdminAllProducts;
 

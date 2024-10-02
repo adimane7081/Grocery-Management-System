@@ -1,55 +1,3 @@
-// import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-
-// const Logout = ({ setIsAuthenticated }) => {
-//     const navigate = useNavigate();
-
-//     const handleLogout = () => {
-//        // Clear authentication state or token
-//         setIsAuthenticated(false);
-//         // Redirect to home page
-//         navigate('/login');
-
-
-//         // const handleLogout = () => {
-//         //     sessionStorage.removeItem('user'); 
-//         //     setIsAuthenticated(false);// Remove user data from session storage
-//         //     navigate('/login');
-//         //  } // Redirect to login page
-//     };
-
-//     return (
-//         <div className="container mt-4">
-//             <h3 className="text-center">Logout</h3>
-//             <div className="text-center mt-4">
-//                 <button className="btn btn-danger" onClick={handleLogout}>
-//                     Logout
-//                 </button>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Logout;
-// // import React from 'react';
-// // import { useNavigate } from 'react-router-dom';
-
-// // const LogoutButton = () => {
-// //     const navigate = useNavigate();
-
-// //     const handleLogout = () => {
-// //         sessionStorage.removeItem('user'); // Remove user data from session storage
-// //         navigate('/login'); // Redirect to login page
-// //     };
-
-// //     return (
-// //         <button onClick={handleLogout}>Logout</button>
-// //     );
-// // };
-
-// // export default LogoutButton;
-
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -60,7 +8,7 @@ const Logout = ({ setIsAuthenticated }) => {
         // Clear authentication state or token
         setIsAuthenticated(false);
         // Redirect to login page
-        navigate('/login');
+        navigate('/');
     };
 
     const styles = {

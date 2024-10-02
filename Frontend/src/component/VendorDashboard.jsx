@@ -493,7 +493,7 @@ const VendorDashboard = () => {
 
   const handleLogout = () => {
     // Perform any necessary logout operations here
-    navigate('/login');
+    navigate('/');
   };
 
   const renderProducts = () => (

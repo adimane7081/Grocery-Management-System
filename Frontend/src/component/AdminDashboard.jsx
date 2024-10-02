@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   return (
     <div style={styles.container}>
       <div style={styles.logoutContainer}>
-        <Link to="/login">
+        <Link to="/">
           <button style={styles.logoutButton}>Logout</button>
         </Link>
       </div>
@@ -24,7 +24,7 @@ const AdminDashboard = () => {
         <Link to="/adminmanagecategory">
           <button style={styles.button} className="button-fade">Manage Category</button>
         </Link>
-        <Link to="/allproducts">
+        <Link to="/adminallproduct">
           <button style={styles.button} className="button-fade">All Products</button>
         </Link>
         <Link to="/allvendors">

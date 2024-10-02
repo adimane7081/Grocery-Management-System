@@ -27,7 +27,7 @@ import UpdateForm from './component/UpdateForm';
 import AllUser from './component/AllUser';
 import VendorProfile from './component/VendorProfile';
 import ManageCategory from './component/ManageCategory';
-
+import AdminAllProducts from './component/AdminAllProduct';
 const App = () => {
     const [cart, setCart] = useState({});
     const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -73,7 +73,7 @@ const App = () => {
         '/allusers',
         '/allcustomers',
         '/addaddressform',
-        '/vendordashboard','/allcategory','/managecategory','/vendorprofile','/adminmanagecategory',
+        '/vendordashboard','/allcategory','/managecategory','/vendorprofile','/adminmanagecategory','/',
     ].includes(location.pathname);
 
     return (
@@ -81,15 +81,16 @@ const App = () => {
             {showNavbar && (
                 <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#ff6347', padding: '10px' }}>
                     <div className="container-fluid">
-                        <img src='your-logo-url-here' alt='logo' />
-                        <Link className="navbar-brand text-white brand-size" to="/">GroceryBuddy</Link>
+                        <h2>GroceryBuddy</h2>
+                        {/* <img src='image\image.jpeg' alt='logo' /> */}
+                        {/* <Link className="navbar-brand text-white brand-size" to="https://www.google.com/imgres?q=grocer%20management%20hd%20logo&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fgrocery-store-logo-design-template-260nw-2087577148.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fgrocery-store-logo&docid=7B_M_ppBhAY_pM&tbnid=9E4RYSgfNcL58M&vet=12ahUKEwi5sqqF9fiHAxUPR2wGHbVwH80QM3oECFkQAA..i&w=260&h=280&hcb=2&ved=2ahUKEwi5sqqF9fiHAxUPR2wGHbVwH80QM3oECFkQAA">GroceryBuddy</Link> */}
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
-                                    <Link className="nav-link text-white" to="/">Products</Link>
+                                    <Link className="nav-link text-white" to="/userdashboard">Products</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link text-white" to="/cart">Cart ({Object.keys(cart).length})</Link>
@@ -108,7 +109,7 @@ const App = () => {
 
             <Routes>
                 <Route 
-                    path="/" 
+                    path="/userdashboard" 
                     element={
                         <ProductGrid 
                             cart={cart} 
@@ -161,7 +162,7 @@ const App = () => {
                 <Route path="/allproducts" element={<AllProducts />} />
                 <Route path="/allvendors" element={<AllVendors />} />
                 <Route path="" element={<Login />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Login />} />
                 
                 <Route path="/register" element={<Register />} />
                 <Route path="/allcustomers" element={<AllCustomers />} />
@@ -172,6 +173,9 @@ const App = () => {
 
                 <Route path="/allusers" element={<AllUser />} />
                 <Route path="/vendorprofile" element={<VendorProfile />} />
+                <Route path="/adminallproduct" element={<AdminAllProducts />} />
+                
+
         
                 <Route path="/adminmanagecategory" element={<ManageCategory />} />
                 <Route path="/managecategory" element={<Category />} />
